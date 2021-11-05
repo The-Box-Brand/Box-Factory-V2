@@ -30,7 +30,7 @@ func main() {
 		}
 
 		box.SaveBox()
-		time.Sleep(100 * time.Millisecond)
+		time.Sleep(10000 * time.Millisecond)
 	}
 
 }
@@ -59,7 +59,10 @@ func loadAttributes() error {
 
 		// Name of image splitted by ~
 		artworkSplit := strings.Split(artwork, "~")
-		fmt.Println(artworkSplit)
+		if len(artworkSplit) < 2 {
+			return nil
+		}
+
 		artworkName := strings.ReplaceAll(artworkSplit[0], "_", " ")
 
 		// Converting rarity string to integer
