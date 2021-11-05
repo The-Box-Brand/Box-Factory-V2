@@ -15,7 +15,9 @@ import (
 
 // Loads attributes before main is ran
 func init() {
-	loadAttributes()
+	if err := loadAttributes(); err != nil {
+		log.Fatal("Failed to load all attributes: " + err.Error())
+	}
 }
 
 func main() {
@@ -33,9 +35,9 @@ func main() {
 
 }
 
-func loadAttributes() {
+func loadAttributes() error {
 	// Walk through every single file in this directory
-	filepath.WalkDir("./", func(path string, d fs.DirEntry, err error) error {
+	return filepath.WalkDir("./", func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
