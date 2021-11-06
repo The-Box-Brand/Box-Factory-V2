@@ -64,14 +64,18 @@ func (box *Box) getExtras() (err error) {
 
 	fmt.Println(extras)
 	// For each extra trait get a random attribute for it
-	for _, extra := range extras {
-		attribute, err := generateRandomAttribute(Traits[extra])
+	for i := 0; i < len(extras); i++ {
+		attribute, err := generateRandomAttribute(Traits[extras[i]])
 		if err != nil {
 			return err
 		}
 
-		switch extra {
+		switch extras[i] {
 		case "binding":
+			if attribute.checkIfInside(box.Bindings) {
+				i--
+				continue
+			}
 			box.Bindings = append(box.Bindings, attribute)
 		case "cutout":
 			box.Cutouts = append(box.Cutouts, attribute)

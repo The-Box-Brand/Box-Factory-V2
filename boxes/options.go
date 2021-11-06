@@ -21,10 +21,14 @@ var ExtrasConfig = map[string]wr.Choice{
 var NumberOfTraitsConfig = []wr.Choice{
 	{
 		Item:   1,
-		Weight: 50,
+		Weight: 33,
 	},
 	{
 		Item:   2,
-		Weight: 50,
+		Weight: 33,
+	},
+	{
+		Item:   3,
+		Weight: 27,
 	},
 }
