@@ -1,6 +1,11 @@
 package boxes
 
-import wr "github.com/mroth/weightedrand"
+import (
+	"sort"
+	"strings"
+
+	wr "github.com/mroth/weightedrand"
+)
 
 // Takes an array of choices and creates the chooser with them
 func createChooser(choices []wr.Choice) (interface{}, error) {
@@ -32,4 +37,19 @@ func generateRandomAttribute(attributes []Attribute) (Attribute, error) {
 		return Attribute{}, err
 	}
 	return chooserInterface.(Attribute), err
+}
+
+// Takes an array of attributes and adds the name with spaces replaced with underscores and then sorts
+// the array alphabetically
+func attributesToNames(attributes []Attribute) (strs []string) {
+	for i := range attributes {
+		strs = append(strs, toRaw(attributes[i].Name))
+	}
+	// Sorts the array, doesn't return anything and just modifies the original array
+	sort.Strings(strs)
+	return
+}
+
+func toRaw(attributeName string) string {
+	return strings.ReplaceAll(attributeName, " ", "_")
 }

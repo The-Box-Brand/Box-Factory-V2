@@ -20,7 +20,7 @@ var NumberOfTraitsConfig = []wr.Choice{
 		Weight: 50,
 	},
 	{
-		Item:   0,
+		Item:   2,
 		Weight: 50,
 	},
 }

@@ -29,8 +29,9 @@ func main() {
 			log.Fatal(err)
 		}
 
-		box.SaveBox()
-		time.Sleep(10000 * time.Millisecond)
+		fmt.Println(box.SaveBox())
+
+		time.Sleep(100 * time.Millisecond)
 	}
 
 }
