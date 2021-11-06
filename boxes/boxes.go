@@ -78,6 +78,9 @@ func (box *Box) getExtras() (err error) {
 			}
 			box.Bindings = append(box.Bindings, attribute)
 		case "cutout":
+			if len(box.Cutouts) != 0 {
+				continue
+			}
 			box.Cutouts = append(box.Cutouts, attribute)
 		}
 	}
