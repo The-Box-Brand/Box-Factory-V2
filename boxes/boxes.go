@@ -62,7 +62,6 @@ func (box *Box) getExtras() (err error) {
 		return err
 	}
 
-	fmt.Println(extras)
 	// For each extra trait get a random attribute for it
 	for i := 0; i < len(extras); i++ {
 		attribute, err := generateRandomAttribute(Traits[extras[i]])
@@ -78,9 +77,6 @@ func (box *Box) getExtras() (err error) {
 			}
 			box.Bindings = append(box.Bindings, attribute)
 		case "cutout":
-			if len(box.Cutouts) != 0 {
-				continue
-			}
 			box.Cutouts = append(box.Cutouts, attribute)
 		}
 	}
@@ -90,10 +86,9 @@ func (box *Box) getExtras() (err error) {
 
 // Saves the box as a png, will need to do lots more in future
 func (box Box) SaveBox() error {
-
 	rgba, err := gim.New([]*gim.Grid{
 		{
-			ImageFilePath: box.Background.ImagePath,
+			ImageFilePath: box.Background.ImagePath, // Switch to box.Color.ImagePath to have no background
 			Grids:         box.createGrids(),
 		},
 	}, 1, 1).Merge()
@@ -105,6 +100,7 @@ func (box Box) SaveBox() error {
 	if err != nil {
 		return err
 	}
+	defer f.Close()
 
 	x2048 := imaging.Resize(rgba, 2048, 2048, imaging.NearestNeighbor)
 	err = png.Encode(f, x2048)
@@ -136,18 +132,27 @@ func (box Box) createGrids() (grid []*gim.Grid) {
 
 // Returns an array of extra traits that will then be used to add to the box
 func generateExtras() (extras []string, err error) {
+	// Gets the random number of extra traits the box will have
 	chooserInterface, err := createChooser(NumberOfTraitsConfig)
 	if err != nil {
 		return extras, err
 	}
 	numberOfExtras := chooserInterface.(int)
 
+	// Copies the config
 	extraChoicesMap := make(map[string]wr.Choice)
 	for key, val := range ExtrasConfig {
 		extraChoicesMap[key] = val
 	}
 
 	for i := 0; i < numberOfExtras; i++ {
+
+		// Don't allow duplicate extras
+		for i := range extras {
+			if extras[i] != "binding" {
+				delete(extraChoicesMap, extras[i])
+			}
+		}
 
 		var extraChoices []wr.Choice
 		for _, val := range extraChoicesMap {
@@ -157,13 +162,6 @@ func generateExtras() (extras []string, err error) {
 		chooserInterface, err := createChooser(extraChoices)
 		if err != nil {
 			return extras, err
-		}
-
-		// Don't allow duplicate extras
-		for i := range extras {
-			if extras[i] != "binding" {
-				delete(extraChoicesMap, extras[i])
-			}
 		}
 
 		extras = append(extras, chooserInterface.(string))
