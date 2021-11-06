@@ -25,7 +25,7 @@ func CreateBox() (Box, error) {
 		return box, err
 	}
 
-	box.Color, err = generateRandomAttribute(Traits["color"])
+	err = box.getColor()
 	if err != nil {
 		return box, err
 	}
@@ -54,6 +54,14 @@ func CreateBox() (Box, error) {
 
 func (box *Box) getBackground() (err error) {
 	box.Background, err = generateRandomAttribute(Traits["background"])
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (box *Box) getColor() (err error) {
+	box.Color, err = generateRandomAttribute(Traits["color"])
 	if err != nil {
 		return err
 	}

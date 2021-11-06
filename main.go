@@ -6,6 +6,7 @@ import (
 	"log"
 	"math/rand"
 	"path/filepath"
+	"runtime"
 	"strconv"
 	"strings"
 	"time"
@@ -43,8 +44,12 @@ func loadAttributes() error {
 			return err
 		}
 
+		char := `\`
+		if runtime.GOOS == "darwin" {
+			char = `/`
+		}
 		// Make sure we are inside one of the trait folders
-		pathSplit := strings.Split(path, `\`)
+		pathSplit := strings.Split(path, char)
 		if len(pathSplit) < 2 {
 			return nil
 		}
