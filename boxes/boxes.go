@@ -30,23 +30,10 @@ func CreateBox() (Box, error) {
 		return box, err
 	}
 
-	// Extra traits
-	extras, err := generateExtras()
+	// Extras
+	err = box.getExtras()
 	if err != nil {
 		return box, err
-	}
-
-	// For each extra trait get a random attribute for it
-	for _, extra := range extras {
-		attribute, err := generateRandomAttribute(Traits[extra])
-		if err != nil {
-			return box, err
-		}
-
-		switch extra {
-		case "binding":
-			box.Bindings = append(box.Bindings, attribute)
-		}
 	}
 
 	return box, err
@@ -66,6 +53,32 @@ func (box *Box) getColor() (err error) {
 		return err
 	}
 	return nil
+}
+
+func (box *Box) getExtras() (err error) {
+	// Extra traits
+	extras, err := generateExtras()
+	if err != nil {
+		return err
+	}
+
+	fmt.Println(extras)
+	// For each extra trait get a random attribute for it
+	for _, extra := range extras {
+		attribute, err := generateRandomAttribute(Traits[extra])
+		if err != nil {
+			return err
+		}
+
+		switch extra {
+		case "binding":
+			box.Bindings = append(box.Bindings, attribute)
+		case "cutout":
+			box.Cutouts = append(box.Cutouts, attribute)
+		}
+	}
+
+	return
 }
 
 // Saves the box as a png, will need to do lots more in future
@@ -100,6 +113,11 @@ func (box Box) createGrids() (grid []*gim.Grid) {
 	grid = append(grid, &gim.Grid{
 		ImageFilePath: box.Color.ImagePath,
 	})
+	for _, cutout := range box.Cutouts {
+		grid = append(grid, &gim.Grid{
+			ImageFilePath: cutout.ImagePath,
+		})
+	}
 	for _, binding := range box.Bindings {
 		grid = append(grid, &gim.Grid{
 			ImageFilePath: binding.ImagePath,
@@ -117,7 +135,10 @@ func generateExtras() (extras []string, err error) {
 	}
 	numberOfExtras := chooserInterface.(int)
 
-	extraChoicesMap := ExtrasConfig
+	extraChoicesMap := make(map[string]wr.Choice)
+	for key, val := range ExtrasConfig {
+		extraChoicesMap[key] = val
+	}
 
 	for i := 0; i < numberOfExtras; i++ {
 

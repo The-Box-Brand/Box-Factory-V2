@@ -30,7 +30,10 @@ func main() {
 			log.Fatal(err)
 		}
 
-		fmt.Println(box.SaveBox())
+		err = box.SaveBox()
+		if err != nil {
+			log.Fatal(err)
+		}
 
 		time.Sleep(100 * time.Millisecond)
 	}

@@ -11,6 +11,10 @@ var ExtrasConfig = map[string]wr.Choice{
 		Item:   "binding",
 		Weight: 25,
 	},
+	"cutout": {
+		Item:   "cutout",
+		Weight: 25,
+	},
 }
 
 // 50/50 for now
