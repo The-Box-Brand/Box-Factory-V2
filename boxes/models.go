@@ -2,10 +2,9 @@ package boxes
 
 type Box struct {
 	Background Attribute
-
-	Color    Attribute
-	Cutouts  []Attribute
-	Bindings []Attribute
+	Color      Attribute
+	Cutouts    []Attribute
+	Bindings   []Attribute
 }
 
 type Attribute struct {

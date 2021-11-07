@@ -85,7 +85,7 @@ func (box *Box) getExtras() (err error) {
 }
 
 // Saves the box as a png, will need to do lots more in future
-func (box Box) SaveBox() error {
+func (box Box) SaveBox(x int) error {
 	rgba, err := gim.New([]*gim.Grid{
 		{
 			ImageFilePath: box.Background.ImagePath, // Switch to box.Color.ImagePath to have no background
@@ -96,7 +96,7 @@ func (box Box) SaveBox() error {
 	if err != nil {
 		return err
 	}
-	f, err := os.Create("image.png")
+	f, err := os.Create("./TBB/" + fmt.Sprint(x) + ".png")
 	if err != nil {
 		return err
 	}

@@ -21,21 +21,54 @@ func init() {
 	}
 }
 
+var attributesToNumber = make(map[string]map[string]int64)
+
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	for {
+	attributesToNumber["background"] = make(map[string]int64)
+	attributesToNumber["color"] = make(map[string]int64)
+	attributesToNumber["cutout"] = make(map[string]int64)
+	attributesToNumber["binding"] = make(map[string]int64)
+
+	var strs []string
+	var boxese []boxes.Box
+
+retry:
+	for x := 1; ; x++ {
 		box, err := boxes.CreateBox()
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		err = box.SaveBox()
+		attributesToNumber["background"][box.Background.Name]++
+		attributesToNumber["color"][box.Color.Name]++
+
+		for _, cutout := range box.Cutouts {
+			attributesToNumber["cutout"][cutout.Name]++
+		}
+		for _, binding := range box.Bindings {
+			attributesToNumber["binding"][binding.Name]++
+		}
+
+		hash := box.CreateHash()
+		for i := 0; i < len(strs); i++ {
+			if strs[i] == hash {
+				fmt.Println("got same box: here are all the unique boxes - " + fmt.Sprint(len(strs)))
+				x--
+				continue retry
+				/* 	jsonBytes, _ := json.MarshalIndent(attributesToNumber, "", "	")
+				log.Fatal(string(jsonBytes)) */
+			}
+		}
+		err = box.SaveBox(x)
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		time.Sleep(100 * time.Millisecond)
+		strs = append(strs, hash)
+		boxese = append(boxese, box)
+
 	}
 
 }
