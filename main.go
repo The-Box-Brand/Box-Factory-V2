@@ -69,6 +69,7 @@ retry:
 		strs = append(strs, hash)
 		boxese = append(boxese, box)
 
+		return
 	}
 
 }

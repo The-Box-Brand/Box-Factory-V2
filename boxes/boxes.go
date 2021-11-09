@@ -114,8 +114,13 @@ func (box Box) SaveBox(x int) error {
 // Create grid helper
 func (box Box) createGrids() (grid []*gim.Grid) {
 	grid = append(grid, &gim.Grid{
+		ImageFilePath: "./Default/BACKGROUNDLINES.png",
+	}, &gim.Grid{
 		ImageFilePath: box.Color.ImagePath,
+	}, &gim.Grid{
+		ImageFilePath: "./Default/BOXLINES.png",
 	})
+
 	for _, cutout := range box.Cutouts {
 		grid = append(grid, &gim.Grid{
 			ImageFilePath: cutout.ImagePath,
