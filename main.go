@@ -16,6 +16,15 @@ import (
 	"github.com/disintegration/imaging"
 )
 
+type miniFactory struct {
+	sync.RWMutex
+	attributesToNumber map[string]map[string]int64
+	factory            boxes.Factory
+	secrets            map[int]bool
+	uniques            map[string]bool
+	duration           time.Duration
+}
+
 // Loads attributes before main is ran
 func init() {
 	rand.Seed(time.Now().UnixNano())
@@ -26,9 +35,10 @@ func init() {
 
 func main() {
 	mf := miniFactory{}
-	mf.createManyUnique(15)
-
 	createCanvas()
+	mf.createManyUnique(5000)
+	fmt.Println(mf.duration)
+
 	createTest()
 }
 
@@ -42,27 +52,20 @@ func createTest() {
 	box.SaveBox("test.png")
 }
 
-type miniFactory struct {
-	sync.RWMutex
-	hashes             []string
-	attributesToNumber map[string]map[string]int64
-	factory            boxes.Factory
-	secrets            map[int]bool
-}
-
 func (mf *miniFactory) createUnique(num int, wg *sync.WaitGroup) {
 	defer wg.Done()
 	mf.Lock()
 	defer mf.Unlock()
-retry:
-	fmt.Println("Creating box: ", num)
 
+	t1 := time.Now()
+retry:
 	var box boxes.Box
 	var err error
 	if mf.secrets[num] {
 		box = mf.factory.CreateSecretBox()
 		mf.attributesToNumber["secret"][box.Secret.Name]++
 	} else {
+
 		box, err = mf.factory.CreateBox()
 		if err != nil {
 			log.Fatal(err)
@@ -85,20 +88,20 @@ retry:
 		}
 
 		hash := box.CreateHash()
-		for i := 0; i < len(mf.hashes); i++ {
-			if mf.hashes[i] == hash {
-				fmt.Println("got same box: here are all the unique boxes - " + fmt.Sprint(len(mf.hashes)))
-				goto retry
 
-			}
+		if _, ok := mf.uniques[hash]; ok {
+			mf.duration += time.Since(t1)
+			goto retry
 		}
-		mf.hashes = append(mf.hashes, hash)
+
+		mf.uniques[hash] = true
+
 	}
 
-	err = box.SaveBox("./TBB/" + fmt.Sprint(num) + ".png")
-	if err != nil {
+	go box.SaveBox("./TBB/" + fmt.Sprint(num) + ".png")
+	/* 	if err != nil {
 		log.Fatal(err)
-	}
+	} */
 
 }
 func (mf *miniFactory) createManyUnique(amount int) {
@@ -112,6 +115,7 @@ func (mf *miniFactory) createManyUnique(amount int) {
 	mf.attributesToNumber["label"] = make(map[string]int64)
 	mf.attributesToNumber["secret"] = make(map[string]int64)
 	mf.secrets = make(map[int]bool)
+	mf.uniques = make(map[string]bool)
 
 	for i := 0; i < len(boxes.Traits["secret"]); {
 		num := rand.Intn(amount)
