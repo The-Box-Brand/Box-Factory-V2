@@ -9,6 +9,7 @@ import (
 	"log"
 	"math/rand"
 	"os"
+	"sync"
 	"time"
 
 	"github.com/The-Box-Brand/Box-Factory-V2/boxes"
@@ -23,16 +24,16 @@ func init() {
 	}
 }
 
-var attributesToNumber = make(map[string]map[string]int64)
-
 func main() {
-	createManyUnique(15)
+	mf := miniFactory{}
+	mf.createManyUnique(15)
 	createCanvas()
 	createTest()
 }
 
 func createTest() {
-	box, err := boxes.CreateBox()
+	factory := boxes.CreateFactory()
+	box, err := factory.CreateBox()
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -40,61 +41,82 @@ func createTest() {
 	box.SaveBox("test.png")
 }
 
-func createManyUnique(amount int) {
+type miniFactory struct {
+	sync.RWMutex
+	hashes             []string
+	attributesToNumber map[string]map[string]int64
+	factory            boxes.Factory
+}
 
-	attributesToNumber["background"] = make(map[string]int64)
-	attributesToNumber["color"] = make(map[string]int64)
-	attributesToNumber["cutout"] = make(map[string]int64)
-	attributesToNumber["strap"] = make(map[string]int64)
-	attributesToNumber["adhesive"] = make(map[string]int64)
-	attributesToNumber["label"] = make(map[string]int64)
-
-	var strs []string
-
+func (mf *miniFactory) createUnique(num int, wg *sync.WaitGroup) {
+	defer wg.Done()
+	mf.Lock()
+	defer mf.Unlock()
 retry:
-	for x := 1; x < amount; x++ {
-		box, err := boxes.CreateBox()
-		if err != nil {
-			log.Fatal(err)
-		}
+	fmt.Println("Creating box: ", num)
 
-		attributesToNumber["background"][box.Background.Name]++
-		attributesToNumber["color"][box.Color.Name]++
-
-		for _, cutout := range box.Cutouts {
-			attributesToNumber["cutout"][cutout.Name]++
-		}
-		for _, strap := range box.Straps {
-			attributesToNumber["strap"][strap.Name]++
-		}
-		for _, adhesive := range box.Adhesives {
-			attributesToNumber["adhesive"][adhesive.Name]++
-		}
-		if box.Label.ImagePath != "" {
-			attributesToNumber["label"][box.Label.Name]++
-		}
-
-		hash := box.CreateHash()
-		for i := 0; i < len(strs); i++ {
-			if strs[i] == hash {
-				fmt.Println("got same box: here are all the unique boxes - " + fmt.Sprint(len(strs)))
-				x--
-				continue retry
-
-			}
-		}
-		err = box.SaveBox("./TBB/" + fmt.Sprint(x) + ".png")
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		strs = append(strs, hash)
+	box, err := mf.factory.CreateBox()
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	jsonBytes, _ := json.MarshalIndent(attributesToNumber, "", "	")
+	mf.attributesToNumber["background"][box.Background.Name]++
+	mf.attributesToNumber["color"][box.Color.Name]++
+
+	for _, cutout := range box.Cutouts {
+		mf.attributesToNumber["cutout"][cutout.Name]++
+	}
+	for _, strap := range box.Straps {
+		mf.attributesToNumber["strap"][strap.Name]++
+	}
+	for _, adhesive := range box.Adhesives {
+		mf.attributesToNumber["adhesive"][adhesive.Name]++
+	}
+	if box.Label.ImagePath != "" {
+		mf.attributesToNumber["label"][box.Label.Name]++
+	}
+
+	hash := box.CreateHash()
+	for i := 0; i < len(mf.hashes); i++ {
+		if mf.hashes[i] == hash {
+			fmt.Println("got same box: here are all the unique boxes - " + fmt.Sprint(len(mf.hashes)))
+			goto retry
+
+		}
+	}
+	err = box.SaveBox("./TBB/" + fmt.Sprint(num) + ".png")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	mf.hashes = append(mf.hashes, hash)
+}
+func (mf *miniFactory) createManyUnique(amount int) {
+
+	mf.attributesToNumber = make(map[string]map[string]int64)
+	mf.attributesToNumber["background"] = make(map[string]int64)
+	mf.attributesToNumber["color"] = make(map[string]int64)
+	mf.attributesToNumber["cutout"] = make(map[string]int64)
+	mf.attributesToNumber["strap"] = make(map[string]int64)
+	mf.attributesToNumber["adhesive"] = make(map[string]int64)
+	mf.attributesToNumber["label"] = make(map[string]int64)
+
+	wg := &sync.WaitGroup{}
+	wg.Add(amount)
+
+	mf.factory = boxes.CreateFactory()
+
+	for x := 1; x <= amount; x++ {
+		go mf.createUnique(x, wg)
+	}
+
+	wg.Wait()
+
+	jsonBytes, _ := json.MarshalIndent(mf.attributesToNumber, "", "	")
 	log.Println(string(jsonBytes))
 }
 func createCanvas() {
+	factory := boxes.CreateFactory()
 
 	width := 1027
 	height := 1027
@@ -105,7 +127,7 @@ func createCanvas() {
 	x := 0
 	y := 0
 	for i := 0; i < maxBoxesOnX*maxBoxesOnY; i++ {
-		box, err := boxes.CreateBox()
+		box, err := factory.CreateBox()
 		if err != nil {
 			log.Fatal(err)
 		}

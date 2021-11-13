@@ -8,6 +8,7 @@ import (
 	"image/png"
 	"os"
 	"strings"
+	"sync"
 
 	"github.com/disintegration/imaging"
 	wr "github.com/mroth/weightedrand"
@@ -16,7 +17,14 @@ import (
 
 var Traits = make(map[string][]Attribute)
 
-func CreateBox() (Box, error) {
+func CreateFactory() Factory {
+	return Factory{RWMutex: sync.RWMutex{}}
+}
+
+func (factory *Factory) CreateBox() (Box, error) {
+	factory.Lock()
+	defer factory.Unlock()
+
 	var box Box
 	var err error
 
