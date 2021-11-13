@@ -35,10 +35,10 @@ func init() {
 
 func main() {
 	mf := miniFactory{}
-	createCanvas()
+
 	mf.createManyUnique(5000)
 	fmt.Println(mf.duration)
-
+	createCanvas()
 	createTest()
 }
 
@@ -57,7 +57,6 @@ func (mf *miniFactory) createUnique(num int, wg *sync.WaitGroup) {
 	mf.Lock()
 	defer mf.Unlock()
 
-	t1 := time.Now()
 retry:
 	var box boxes.Box
 	var err error
@@ -65,12 +64,12 @@ retry:
 		box = mf.factory.CreateSecretBox()
 		mf.attributesToNumber["secret"][box.Secret.Name]++
 	} else {
-
+		t1 := time.Now()
 		box, err = mf.factory.CreateBox()
 		if err != nil {
 			log.Fatal(err)
 		}
-
+		mf.duration += time.Since(t1)
 		mf.attributesToNumber["background"][box.Background.Name]++
 		mf.attributesToNumber["color"][box.Color.Name]++
 
@@ -90,7 +89,6 @@ retry:
 		hash := box.CreateHash()
 
 		if _, ok := mf.uniques[hash]; ok {
-			mf.duration += time.Since(t1)
 			goto retry
 		}
 
