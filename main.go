@@ -36,7 +36,7 @@ func init() {
 func main() {
 	mf := miniFactory{}
 
-	mf.createManyUnique(5000)
+	//mf.createManyUnique(5000)
 	fmt.Println(mf.duration)
 	createCanvas()
 	createTest()
@@ -149,13 +149,40 @@ func createCanvas() {
 
 	x := 0
 	y := 0
+
+	var newBoxes = make([]boxes.Box, maxBoxesOnX*maxBoxesOnY)
+
 	for i := 0; i < maxBoxesOnX*maxBoxesOnY; i++ {
+	retry:
 		box, err := factory.CreateBox()
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		boxPNG, err := box.GetPNG()
+		locX := i % maxBoxesOnX
+		locY := i / maxBoxesOnX
+
+		if i != 0 {
+			if newBoxes[locX-1+locY*maxBoxesOnX].Color.ImagePath == box.Color.ImagePath {
+				goto retry
+			}
+
+		}
+		if locY != 0 {
+			if locX != 0 {
+				if newBoxes[locX+(locY-1)*maxBoxesOnX].Color.ImagePath == box.Color.ImagePath {
+					goto retry
+				}
+			}
+			if newBoxes[locX+1+(locY-1)*maxBoxesOnX].Color.ImagePath == box.Color.ImagePath {
+				goto retry
+			}
+		}
+		newBoxes[i] = box
+	}
+
+	for i := 0; i < maxBoxesOnX*maxBoxesOnY; i++ {
+		boxPNG, err := newBoxes[i].GetPNG()
 		if err != nil {
 			log.Fatal(err)
 		}
