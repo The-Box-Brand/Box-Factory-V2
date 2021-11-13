@@ -4,6 +4,7 @@ import (
 	"crypto/md5"
 	"encoding/hex"
 	"fmt"
+	"image"
 	"image/png"
 	"os"
 	"strings"
@@ -70,14 +71,22 @@ func (box *Box) getExtras() (err error) {
 		}
 
 		switch extras[i] {
-		case "binding":
-			if attribute.checkIfInside(box.Bindings) {
+		case "strap":
+			if attribute.checkIfInside(box.Straps) {
+				//i--
+				continue
+			}
+			box.Straps = append(box.Straps, attribute)
+		case "adhesive":
+			if attribute.checkIfInside(box.Adhesives) {
 				i--
 				continue
 			}
-			box.Bindings = append(box.Bindings, attribute)
+			box.Adhesives = append(box.Adhesives, attribute)
 		case "cutout":
 			box.Cutouts = append(box.Cutouts, attribute)
+		case "label":
+			box.Label = attribute
 		}
 	}
 
@@ -85,18 +94,18 @@ func (box *Box) getExtras() (err error) {
 }
 
 // Saves the box as a png, will need to do lots more in future
-func (box Box) SaveBox(x int) error {
+func (box Box) SaveBox(path string) error {
 	rgba, err := gim.New([]*gim.Grid{
 		{
 			ImageFilePath: box.Background.ImagePath, // Switch to box.Color.ImagePath to have no background
-			Grids:         box.createGrids(),
+			Grids:         box.createGrids(false),
 		},
 	}, 1, 1).Merge()
 
 	if err != nil {
 		return err
 	}
-	f, err := os.Create("./TBB/" + fmt.Sprint(x) + ".png")
+	f, err := os.Create(path)
 	if err != nil {
 		return err
 	}
@@ -111,11 +120,27 @@ func (box Box) SaveBox(x int) error {
 	return err
 }
 
+func (box Box) GetPNG() (image.Image, error) {
+	rgba, err := gim.New([]*gim.Grid{
+		{
+			ImageFilePath: box.Color.ImagePath, // Switch to box.Color.ImagePath to have no background
+			Grids:         box.createGrids(true),
+		},
+	}, 1, 1).Merge()
+	if err != nil {
+		return nil, err
+	}
+	return rgba, err
+}
+
 // Create grid helper
-func (box Box) createGrids() (grid []*gim.Grid) {
+func (box Box) createGrids(isPNG bool) (grid []*gim.Grid) {
+	if !isPNG {
+		grid = append(grid, &gim.Grid{
+			ImageFilePath: "./Default/BACKGROUNDLINES.png",
+		})
+	}
 	grid = append(grid, &gim.Grid{
-		ImageFilePath: "./Default/BACKGROUNDLINES.png",
-	}, &gim.Grid{
 		ImageFilePath: box.Color.ImagePath,
 	}, &gim.Grid{
 		ImageFilePath: "./Default/BOXLINES.png",
@@ -126,9 +151,19 @@ func (box Box) createGrids() (grid []*gim.Grid) {
 			ImageFilePath: cutout.ImagePath,
 		})
 	}
-	for _, binding := range box.Bindings {
+	for _, adhesive := range box.Adhesives {
 		grid = append(grid, &gim.Grid{
-			ImageFilePath: binding.ImagePath,
+			ImageFilePath: adhesive.ImagePath,
+		})
+	}
+	if box.Label.ImagePath != "" {
+		grid = append(grid, &gim.Grid{
+			ImageFilePath: box.Label.ImagePath,
+		})
+	}
+	for _, strap := range box.Straps {
+		grid = append(grid, &gim.Grid{
+			ImageFilePath: strap.ImagePath,
 		})
 	}
 
@@ -154,7 +189,7 @@ func generateExtras() (extras []string, err error) {
 
 		// Don't allow duplicate extras
 		for i := range extras {
-			if extras[i] != "binding" {
+			if extras[i] != "strap" && extras[i] != "adhesive" {
 				delete(extraChoicesMap, extras[i])
 			}
 		}
@@ -175,11 +210,12 @@ func generateExtras() (extras []string, err error) {
 }
 
 func (box Box) CreateHash() string {
-	bindingNames := attributesToNames(box.Bindings)
+	strapNames := attributesToNames(box.Straps)
+	adhesiveNames := attributesToNames(box.Adhesives)
 	cutoutNames := attributesToNames(box.Cutouts)
 
-	boxFormat := "Background:%v|Color:%v|Cutouts:%v|Bindings:%v"
+	boxFormat := "Background:%v|Color:%v|Cutouts:%v|Adhesives:%v|Straps:%v|Label:%v"
 
-	hash := md5.Sum([]byte(fmt.Sprintf(boxFormat, toRaw(box.Background.Name), toRaw(box.Color.Name), strings.Join(cutoutNames, ","), strings.Join(bindingNames, ","))))
+	hash := md5.Sum([]byte(fmt.Sprintf(boxFormat, toRaw(box.Background.Name), toRaw(box.Color.Name), strings.Join(cutoutNames, ","), strings.Join(adhesiveNames, ","), strings.Join(strapNames, ","), toRaw(box.Label.Name))))
 	return hex.EncodeToString(hash[:])
 }
