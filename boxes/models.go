@@ -9,6 +9,8 @@ type Box struct {
 	Adhesives  []Attribute
 	Label      Attribute
 	Straps     []Attribute
+
+	Secret Attribute
 }
 
 type Attribute struct {

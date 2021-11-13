@@ -7,6 +7,13 @@ import (
 	wr "github.com/mroth/weightedrand"
 )
 
+func ternaryOperator(cond bool, t, f interface{}) interface{} {
+	if cond {
+		return t
+	}
+	return f
+}
+
 // Takes an array of choices and creates the chooser with them
 func createChooser(choices []wr.Choice) (interface{}, error) {
 	chooser, err := wr.NewChooser(choices...)

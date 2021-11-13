@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"image"
 	"image/png"
+	"math/rand"
 	"os"
 	"strings"
 	"sync"
@@ -19,6 +20,17 @@ var Traits = make(map[string][]Attribute)
 
 func CreateFactory() Factory {
 	return Factory{RWMutex: sync.RWMutex{}}
+}
+
+func (factory *Factory) CreateSecretBox() Box {
+	choice := rand.Intn(len(Traits["secret"]))
+
+	var box Box
+	box.Secret = Traits["secret"][choice]
+
+	Traits["secret"] = append(Traits["secret"][:choice], Traits["secret"][choice+1:]...)
+
+	return box
 }
 
 func (factory *Factory) CreateBox() (Box, error) {
@@ -103,10 +115,11 @@ func (box *Box) getExtras() (err error) {
 
 // Saves the box as a png, will need to do lots more in future
 func (box Box) SaveBox(path string) error {
+	cond := box.Secret.ImagePath == ""
 	rgba, err := gim.New([]*gim.Grid{
 		{
-			ImageFilePath: box.Background.ImagePath, // Switch to box.Color.ImagePath to have no background
-			Grids:         box.createGrids(false),
+			ImageFilePath: ternaryOperator(cond, box.Background.ImagePath, box.Secret.ImagePath).(string), // Switch to box.Color.ImagePath to have no background
+			Grids:         ternaryOperator(cond, box.createGrids(false), []*gim.Grid{}).([]*gim.Grid),
 		},
 	}, 1, 1).Merge()
 

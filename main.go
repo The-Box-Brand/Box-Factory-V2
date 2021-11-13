@@ -27,6 +27,7 @@ func init() {
 func main() {
 	mf := miniFactory{}
 	mf.createManyUnique(15)
+
 	createCanvas()
 	createTest()
 }
@@ -46,6 +47,7 @@ type miniFactory struct {
 	hashes             []string
 	attributesToNumber map[string]map[string]int64
 	factory            boxes.Factory
+	secrets            map[int]bool
 }
 
 func (mf *miniFactory) createUnique(num int, wg *sync.WaitGroup) {
@@ -55,41 +57,49 @@ func (mf *miniFactory) createUnique(num int, wg *sync.WaitGroup) {
 retry:
 	fmt.Println("Creating box: ", num)
 
-	box, err := mf.factory.CreateBox()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	mf.attributesToNumber["background"][box.Background.Name]++
-	mf.attributesToNumber["color"][box.Color.Name]++
-
-	for _, cutout := range box.Cutouts {
-		mf.attributesToNumber["cutout"][cutout.Name]++
-	}
-	for _, strap := range box.Straps {
-		mf.attributesToNumber["strap"][strap.Name]++
-	}
-	for _, adhesive := range box.Adhesives {
-		mf.attributesToNumber["adhesive"][adhesive.Name]++
-	}
-	if box.Label.ImagePath != "" {
-		mf.attributesToNumber["label"][box.Label.Name]++
-	}
-
-	hash := box.CreateHash()
-	for i := 0; i < len(mf.hashes); i++ {
-		if mf.hashes[i] == hash {
-			fmt.Println("got same box: here are all the unique boxes - " + fmt.Sprint(len(mf.hashes)))
-			goto retry
-
+	var box boxes.Box
+	var err error
+	if mf.secrets[num] {
+		box = mf.factory.CreateSecretBox()
+		mf.attributesToNumber["secret"][box.Secret.Name]++
+	} else {
+		box, err = mf.factory.CreateBox()
+		if err != nil {
+			log.Fatal(err)
 		}
+
+		mf.attributesToNumber["background"][box.Background.Name]++
+		mf.attributesToNumber["color"][box.Color.Name]++
+
+		for _, cutout := range box.Cutouts {
+			mf.attributesToNumber["cutout"][cutout.Name]++
+		}
+		for _, strap := range box.Straps {
+			mf.attributesToNumber["strap"][strap.Name]++
+		}
+		for _, adhesive := range box.Adhesives {
+			mf.attributesToNumber["adhesive"][adhesive.Name]++
+		}
+		if box.Label.ImagePath != "" {
+			mf.attributesToNumber["label"][box.Label.Name]++
+		}
+
+		hash := box.CreateHash()
+		for i := 0; i < len(mf.hashes); i++ {
+			if mf.hashes[i] == hash {
+				fmt.Println("got same box: here are all the unique boxes - " + fmt.Sprint(len(mf.hashes)))
+				goto retry
+
+			}
+		}
+		mf.hashes = append(mf.hashes, hash)
 	}
+
 	err = box.SaveBox("./TBB/" + fmt.Sprint(num) + ".png")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	mf.hashes = append(mf.hashes, hash)
 }
 func (mf *miniFactory) createManyUnique(amount int) {
 
@@ -100,6 +110,17 @@ func (mf *miniFactory) createManyUnique(amount int) {
 	mf.attributesToNumber["strap"] = make(map[string]int64)
 	mf.attributesToNumber["adhesive"] = make(map[string]int64)
 	mf.attributesToNumber["label"] = make(map[string]int64)
+	mf.attributesToNumber["secret"] = make(map[string]int64)
+	mf.secrets = make(map[int]bool)
+
+	for i := 0; i < len(boxes.Traits["secret"]); {
+		num := rand.Intn(amount)
+		if _, ok := mf.secrets[num]; ok {
+			continue
+		}
+		mf.secrets[num] = true
+		i++
+	}
 
 	wg := &sync.WaitGroup{}
 	wg.Add(amount)
