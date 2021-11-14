@@ -1,0 +1,3222 @@
+{
+	"1": {
+		"adhesives": "",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"10": {
+		"adhesives": "",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"100": {
+		"adhesives": "",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"101": {
+		"adhesives": "Double_Side",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"102": {
+		"adhesives": "Double_Side",
+		"color": "Brown",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"103": {
+		"adhesives": "",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": "Double_Strapped_Right"
+	},
+	"104": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"105": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "Label TR 3",
+		"straps": ""
+	},
+	"106": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"107": {
+		"adhesives": "",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"108": {
+		"adhesives": "Double_Side",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"109": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Dark Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"11": {
+		"adhesives": "",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"110": {
+		"adhesives": "Double_Side",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"111": {
+		"adhesives": "",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"112": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"113": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Lavender",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"114": {
+		"adhesives": "Double_Side",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"115": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"116": {
+		"adhesives": "Caution_Tape_Right",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"117": {
+		"adhesives": "",
+		"color": "Maroon",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": ""
+	},
+	"118": {
+		"adhesives": "",
+		"color": "Cherry",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"119": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"12": {
+		"adhesives": "Double_Side",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"120": {
+		"adhesives": "",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"121": {
+		"adhesives": "Double_Side",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"122": {
+		"adhesives": "Double_Side",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": ""
+	},
+	"123": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Bright Green",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"124": {
+		"adhesives": "Caution_Tape_Right",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"125": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"126": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Blue",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"127": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"128": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"129": {
+		"adhesives": "",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "Label BR 2",
+		"straps": ""
+	},
+	"13": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": ""
+	},
+	"130": {
+		"adhesives": "",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"131": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "Label TR 3",
+		"straps": ""
+	},
+	"132": {
+		"adhesives": "",
+		"color": "Off Brown",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"133": {
+		"adhesives": "",
+		"color": "Bright Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"134": {
+		"adhesives": "",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "Label BR 2",
+		"straps": ""
+	},
+	"135": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Yellow",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"136": {
+		"adhesives": "Single_Middle_Right",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"137": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": "Double_Strapped_Right"
+	},
+	"138": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"139": {
+		"adhesives": "Double_Side",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"14": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"140": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"141": {
+		"adhesives": "",
+		"color": "Cherry",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": ""
+	},
+	"142": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Dark Grey",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"143": {
+		"adhesives": "Double_Side",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"144": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"145": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "Label BR 2",
+		"straps": "Double_Strapped_Left"
+	},
+	"146": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Off Yellow",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"147": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"148": {
+		"adhesives": "",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"149": {
+		"adhesives": "Double_Side",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"15": {
+		"adhesives": "",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"150": {
+		"adhesives": "",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"151": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"152": {
+		"adhesives": "",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"153": {
+		"adhesives": "Double_Side",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"154": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"155": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"156": {
+		"adhesives": "Double_Side",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"157": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Dark Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"158": {
+		"adhesives": "",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"159": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Bright Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"16": {
+		"adhesives": "",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"160": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"161": {
+		"adhesives": "Double_Side",
+		"color": "SILVER",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"162": {
+		"adhesives": "",
+		"color": "Light Yellow",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"163": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"164": {
+		"adhesives": "Double_Side",
+		"color": "Purple",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"165": {
+		"adhesives": "Double_Side",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"166": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"167": {
+		"adhesives": "Double_Side",
+		"color": "Light Blue",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": ""
+	},
+	"168": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"169": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"17": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"170": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"171": {
+		"adhesives": "",
+		"color": "Dark Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"172": {
+		"adhesives": "",
+		"color": "Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"173": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "Label BR 2",
+		"straps": ""
+	},
+	"174": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Pink",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": ""
+	},
+	"175": {
+		"adhesives": "",
+		"color": "Purple",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"176": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"177": {
+		"adhesives": "",
+		"color": "Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"178": {
+		"adhesives": "Double_Side",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "Label TR 3",
+		"straps": ""
+	},
+	"179": {
+		"adhesives": "Caution_Tape_Right,Double_Side,Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"18": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "BRONZE",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"180": {
+		"adhesives": "Double_Side",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"181": {
+		"adhesives": "Caution_Tape_Left,Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Blue",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": ""
+	},
+	"182": {
+		"adhesives": "Double_Side",
+		"color": "Purple",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"183": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"184": {
+		"adhesives": "Double_Side",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"185": {
+		"adhesives": "Double_Side",
+		"color": "Dark Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"186": {
+		"adhesives": "Double_Side",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"187": {
+		"adhesives": "",
+		"color": "Maroon",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"188": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"189": {
+		"adhesives": "",
+		"color": "Teal",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": ""
+	},
+	"19": {
+		"adhesives": "",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"190": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"191": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"192": {
+		"adhesives": "",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"193": {
+		"adhesives": "Double_Side",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"194": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"195": {
+		"adhesives": "",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": "Double_Strapped_Left"
+	},
+	"196": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"197": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"198": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"199": {
+		"adhesives": "Double_Side",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"2": {
+		"adhesives": "Double_Side",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"20": {
+		"adhesives": "Double_Side",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": ""
+	},
+	"200": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"201": {
+		"adhesives": "",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"202": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"203": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Bright Green",
+		"cutouts": "Holes_Right",
+		"label": "Label BL 2",
+		"straps": "Double_Strapped_Right"
+	},
+	"204": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"205": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"206": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": "Double_Strapped_Left"
+	},
+	"207": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Bright Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"208": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Turquoise",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"209": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"21": {
+		"adhesives": "",
+		"color": "Pink",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"210": {
+		"adhesives": "",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"211": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Dark Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"212": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"213": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Off Yellow",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"214": {
+		"adhesives": "",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "Label BR 3",
+		"straps": ""
+	},
+	"215": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"216": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"217": {
+		"adhesives": "",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "Label BR 3",
+		"straps": ""
+	},
+	"218": {
+		"adhesives": "Caution_Tape_Left,Single_Middle_Left,Single_Middle_Right",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": ""
+	},
+	"219": {
+		"adhesives": "",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"22": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"220": {
+		"adhesives": "",
+		"color": "Leaf",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"221": {
+		"adhesives": "",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"222": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"223": {
+		"adhesives": "Double_Side",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"224": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"225": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Maroon",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": ""
+	},
+	"226": {
+		"adhesives": "Caution_Tape_Right,Single_Middle_Right",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"227": {
+		"adhesives": "",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": ""
+	},
+	"228": {
+		"adhesives": "",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"229": {
+		"adhesives": "Caution_Tape_Left,Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"23": {
+		"adhesives": "",
+		"color": "Bright Blue",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"230": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"231": {
+		"adhesives": "Double_Side",
+		"color": "Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"232": {
+		"adhesives": "Double_Side",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"233": {
+		"adhesives": "",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "Label TL 2",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"234": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"235": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"236": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"237": {
+		"adhesives": "",
+		"color": "Dark Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"238": {
+		"adhesives": "Double_Side",
+		"color": "IRON",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": ""
+	},
+	"239": {
+		"adhesives": "",
+		"color": "Mint",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": ""
+	},
+	"24": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"240": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"241": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Purple",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"242": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"243": {
+		"adhesives": "",
+		"color": "Cherry",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"244": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"245": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"246": {
+		"adhesives": "",
+		"color": "Off Brown",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"247": {
+		"adhesives": "",
+		"color": "Light Yellow",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": ""
+	},
+	"248": {
+		"adhesives": "",
+		"color": "Brown",
+		"cutouts": "Holes_Right",
+		"label": "Label TR 2",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"249": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"25": {
+		"adhesives": "Double_Side",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": "Double_Strapped_Right"
+	},
+	"250": {
+		"adhesives": "Double_Side",
+		"color": "Orchid",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"251": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Purple",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"252": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"253": {
+		"adhesives": "Caution_Tape_Right",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"254": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": "Double_Strapped_Left"
+	},
+	"255": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"256": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"257": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"258": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"259": {
+		"adhesives": "Double_Side",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"26": {
+		"adhesives": "",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "Label TL 2",
+		"straps": "Double_Strapped_Right"
+	},
+	"260": {
+		"adhesives": "Double_Side",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"261": {
+		"adhesives": "Double_Side",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": "Double_Strapped_Left"
+	},
+	"262": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Turquoise",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"263": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"264": {
+		"adhesives": "",
+		"color": "Brown",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"265": {
+		"adhesives": "Caution_Tape_Right,Double_Side",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"266": {
+		"adhesives": "",
+		"color": "Light Grey",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"267": {
+		"adhesives": "",
+		"color": "White",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": ""
+	},
+	"268": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"269": {
+		"adhesives": "",
+		"color": "Bright Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"27": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"270": {
+		"adhesives": "",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"271": {
+		"adhesives": "",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": "Double_Strapped_Right"
+	},
+	"272": {
+		"adhesives": "",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "Label TR 3",
+		"straps": ""
+	},
+	"273": {
+		"adhesives": "Double_Side",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"274": {
+		"adhesives": "Double_Side",
+		"color": "Cherry",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"275": {
+		"adhesives": "",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "Label TR 3",
+		"straps": ""
+	},
+	"276": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Bright Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"277": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"278": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Dark Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"279": {
+		"adhesives": "",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": ""
+	},
+	"28": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"280": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"281": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"282": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"283": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"284": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"285": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"286": {
+		"adhesives": "",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"287": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"288": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"289": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"29": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"290": {
+		"adhesives": "",
+		"color": "Pink",
+		"cutouts": "Handle_Left",
+		"label": "Label TR 3",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"291": {
+		"adhesives": "",
+		"color": "Grey",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": ""
+	},
+	"292": {
+		"adhesives": "Double_Side",
+		"color": "Cherry",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"293": {
+		"adhesives": "",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "Label TR 3",
+		"straps": "Double_Strapped_Right"
+	},
+	"294": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"295": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"296": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Pink",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"297": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"298": {
+		"adhesives": "",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"299": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"3": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"30": {
+		"adhesives": "Double_Side",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"300": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"301": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"302": {
+		"adhesives": "",
+		"color": "Off Brown",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"303": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"304": {
+		"adhesives": "Caution_Tape_Left",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"305": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"306": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"307": {
+		"adhesives": "",
+		"color": "Purple",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"308": {
+		"adhesives": "",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"309": {
+		"adhesives": "",
+		"color": "Ocean Green",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": ""
+	},
+	"31": {
+		"adhesives": "Double_Side",
+		"color": "Bright Green",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"310": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Purple",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"311": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"312": {
+		"adhesives": "",
+		"color": "Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"313": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"314": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"315": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"316": {
+		"adhesives": "Double_Side",
+		"color": "Brown",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"317": {
+		"adhesives": "",
+		"color": "Ocean Green",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"318": {
+		"adhesives": "Single_Middle_Left",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"319": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Orchid",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"32": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": "Double_Strapped_Left"
+	},
+	"320": {
+		"adhesives": "",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"321": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"322": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Orchid",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"323": {
+		"adhesives": "Double_Side",
+		"color": "Yellow",
+		"cutouts": "Holes_Right",
+		"label": "Label BR 3",
+		"straps": ""
+	},
+	"324": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Brown",
+		"cutouts": "Holes_Right",
+		"label": "Label TR 3",
+		"straps": ""
+	},
+	"325": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": ""
+	},
+	"326": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"327": {
+		"adhesives": "Caution_Tape_Right,Double_Side",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"328": {
+		"adhesives": "Double_Side",
+		"color": "Yellow",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"329": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"33": {
+		"adhesives": "Double_Side",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"330": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"331": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"332": {
+		"adhesives": "Caution_Tape_Left,Double_Side,Single_Middle_Right",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"333": {
+		"adhesives": "",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": ""
+	},
+	"334": {
+		"adhesives": "",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"335": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"336": {
+		"adhesives": "Single_Middle_Right",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"337": {
+		"adhesives": "Double_Side",
+		"color": "Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"338": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Orange",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"339": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Bright Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"34": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Green",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"340": {
+		"adhesives": "",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "Label TR 3",
+		"straps": ""
+	},
+	"341": {
+		"adhesives": "",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": "Double_Strapped_Left"
+	},
+	"342": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Bright Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"343": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"344": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"345": {
+		"adhesives": "",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": ""
+	},
+	"346": {
+		"adhesives": "",
+		"color": "Bright Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"347": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"348": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"349": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"35": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"350": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"351": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": ""
+	},
+	"352": {
+		"adhesives": "Double_Side",
+		"color": "Maroon",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": ""
+	},
+	"353": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"354": {
+		"adhesives": "",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"355": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"356": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": "Double_Strapped_Right"
+	},
+	"357": {
+		"adhesives": "",
+		"color": "Grey",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"358": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"359": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"36": {
+		"adhesives": "",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"360": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"361": {
+		"adhesives": "Caution_Tape_Right",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"362": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"363": {
+		"adhesives": "Caution_Tape_Left,Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "Label TR 3",
+		"straps": ""
+	},
+	"364": {
+		"adhesives": "",
+		"color": "Turquoise",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"365": {
+		"adhesives": "Double_Side",
+		"color": "Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"366": {
+		"adhesives": "",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "Label TL 2",
+		"straps": "Double_Strapped_Right"
+	},
+	"367": {
+		"adhesives": "",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"368": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Bright Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"369": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"37": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": ""
+	},
+	"370": {
+		"adhesives": "Caution_Tape_Right",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"371": {
+		"adhesives": "",
+		"color": "Turquoise",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"372": {
+		"adhesives": "",
+		"color": "Dark Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"373": {
+		"adhesives": "Double_Side",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"374": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"375": {
+		"adhesives": "",
+		"color": "White",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"376": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"377": {
+		"adhesives": "",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "Label BR 3",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"378": {
+		"adhesives": "",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"379": {
+		"adhesives": "",
+		"color": "Purple",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": "Double_Strapped_Left"
+	},
+	"38": {
+		"adhesives": "Double_Side",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"380": {
+		"adhesives": "",
+		"color": "Cherry",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": ""
+	},
+	"381": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"382": {
+		"adhesives": "Caution_Tape_Left,Double_Side,Single_Middle_Right",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"383": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"384": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"385": {
+		"adhesives": "",
+		"color": "Cherry",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"386": {
+		"adhesives": "",
+		"color": "Light Grey",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": ""
+	},
+	"387": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"388": {
+		"adhesives": "",
+		"color": "Light Yellow",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"389": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"39": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"390": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"391": {
+		"adhesives": "",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "Label BR 2",
+		"straps": "Double_Strapped_Left"
+	},
+	"392": {
+		"adhesives": "",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": ""
+	},
+	"393": {
+		"adhesives": "",
+		"color": "Bright Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"394": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"395": {
+		"adhesives": "Double_Side",
+		"color": "Bright Green",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": ""
+	},
+	"396": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"397": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"398": {
+		"adhesives": "Double_Side",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"399": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"4": {
+		"adhesives": "",
+		"color": "Orange",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": ""
+	},
+	"40": {
+		"adhesives": "Double_Side",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"400": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Off Yellow",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"401": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"402": {
+		"adhesives": "Double_Side",
+		"color": "Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"403": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"404": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"405": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": ""
+	},
+	"406": {
+		"adhesives": "",
+		"color": "Purple",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"407": {
+		"adhesives": "",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"408": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Bright Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"409": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"41": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"410": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Orange",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": ""
+	},
+	"411": {
+		"adhesives": "",
+		"color": "Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"412": {
+		"adhesives": "",
+		"color": "Bright Green",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"413": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"414": {
+		"adhesives": "",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"415": {
+		"adhesives": "",
+		"color": "BRONZE",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"416": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"417": {
+		"adhesives": "Double_Side",
+		"color": "Off Yellow",
+		"cutouts": "Holes_Left",
+		"label": "",
+		"straps": ""
+	},
+	"418": {
+		"adhesives": "",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"419": {
+		"adhesives": "Double_Side",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"42": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"420": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Yellow",
+		"cutouts": "Handle_Left",
+		"label": "Label TR 2",
+		"straps": ""
+	},
+	"421": {
+		"adhesives": "",
+		"color": "Dark Grey",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": ""
+	},
+	"422": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": "Double_Strapped_Right"
+	},
+	"423": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": ""
+	},
+	"424": {
+		"adhesives": "Double_Side",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"425": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"426": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": "Double_Strapped_Left"
+	},
+	"427": {
+		"adhesives": "",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": ""
+	},
+	"428": {
+		"adhesives": "",
+		"color": "Blue",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": ""
+	},
+	"429": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Off Yellow",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": ""
+	},
+	"43": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"430": {
+		"adhesives": "Caution_Tape_Left",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"431": {
+		"adhesives": "Caution_Tape_Right,Single_Middle_Right",
+		"color": "Mint",
+		"cutouts": "Holes_Right",
+		"label": "",
+		"straps": ""
+	},
+	"432": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Bright Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"433": {
+		"adhesives": "",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"434": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"435": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"436": {
+		"adhesives": "",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"437": {
+		"adhesives": "Double_Side",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"438": {
+		"adhesives": "Double_Side",
+		"color": "Cherry",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"439": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"44": {
+		"adhesives": "Double_Side",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"440": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Bright Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"441": {
+		"adhesives": "",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": ""
+	},
+	"442": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"443": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Bright Blue",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": ""
+	},
+	"444": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "Label BR 3",
+		"straps": ""
+	},
+	"445": {
+		"adhesives": "Double_Side",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"446": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "Label TL 2",
+		"straps": ""
+	},
+	"447": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"448": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Cherry",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"449": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"45": {
+		"adhesives": "",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"450": {
+		"adhesives": "Double_Side",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "Label TL 2",
+		"straps": ""
+	},
+	"451": {
+		"adhesives": "",
+		"color": "Orchid",
+		"cutouts": "",
+		"label": "Label TL 2",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"452": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Maroon",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": ""
+	},
+	"453": {
+		"adhesives": "",
+		"color": "Orange",
+		"cutouts": "",
+		"label": "Label TR 3",
+		"straps": ""
+	},
+	"454": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"455": {
+		"adhesives": "Single_Middle_Right",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"456": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"457": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"458": {
+		"adhesives": "",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": ""
+	},
+	"459": {
+		"adhesives": "",
+		"color": "Light Orange",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"46": {
+		"adhesives": "",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"460": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"47": {
+		"adhesives": "",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "Label BR 2",
+		"straps": "Double_Strapped_Left"
+	},
+	"48": {
+		"adhesives": "",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"49": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"5": {
+		"adhesives": "",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"50": {
+		"adhesives": "",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"51": {
+		"adhesives": "Double_Side",
+		"color": "Bright Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"52": {
+		"adhesives": "",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"53": {
+		"adhesives": "",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"54": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": ""
+	},
+	"55": {
+		"adhesives": "",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"56": {
+		"adhesives": "Double_Side",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"57": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"58": {
+		"adhesives": "",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"59": {
+		"adhesives": "",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": "Double_Strapped_Right"
+	},
+	"6": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"60": {
+		"adhesives": "Caution_Tape_Left,Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"61": {
+		"adhesives": "",
+		"color": "Light Orange",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": ""
+	},
+	"62": {
+		"adhesives": "Caution_Tape_Left",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"63": {
+		"adhesives": "Double_Side",
+		"color": "Teal",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"64": {
+		"adhesives": "Double_Side",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"65": {
+		"adhesives": "Double_Side",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"66": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"67": {
+		"adhesives": "Double_Side,Single_Middle_Left,Single_Middle_Right",
+		"color": "Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"68": {
+		"adhesives": "",
+		"color": "Orchid",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"69": {
+		"adhesives": "",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"7": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"70": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"71": {
+		"adhesives": "",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"72": {
+		"adhesives": "Double_Side,Single_Middle_Right",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"73": {
+		"adhesives": "",
+		"color": "Lavender",
+		"cutouts": "Handle_Right",
+		"label": "",
+		"straps": ""
+	},
+	"74": {
+		"adhesives": "Double_Side",
+		"color": "Light Grey",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"75": {
+		"adhesives": "",
+		"color": "Purple",
+		"cutouts": "",
+		"label": "Label TR 2",
+		"straps": ""
+	},
+	"76": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Off Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"77": {
+		"adhesives": "Caution_Tape_Right,Double_Side",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"78": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Cherry",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"79": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Orchid",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"8": {
+		"adhesives": "",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"80": {
+		"adhesives": "Double_Side",
+		"color": "Brown",
+		"cutouts": "Holes_Right",
+		"label": "Label TL 2",
+		"straps": ""
+	},
+	"81": {
+		"adhesives": "",
+		"color": "White",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"82": {
+		"adhesives": "",
+		"color": "Maroon",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"83": {
+		"adhesives": "Double_Side",
+		"color": "Light Grey",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"84": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"85": {
+		"adhesives": "",
+		"color": "Bright Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left,Double_Strapped_Right"
+	},
+	"86": {
+		"adhesives": "",
+		"color": "Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"87": {
+		"adhesives": "",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": ""
+	},
+	"88": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Ocean Green",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"89": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Yellow",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Right"
+	},
+	"9": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Off Brown",
+		"cutouts": "",
+		"label": "Label BL 3",
+		"straps": ""
+	},
+	"90": {
+		"adhesives": "",
+		"color": "Light Orange",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"91": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": ""
+	},
+	"92": {
+		"adhesives": "Single_Middle_Left,Single_Middle_Right",
+		"color": "Blue",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"93": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Blue",
+		"cutouts": "Handle_Left",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"94": {
+		"adhesives": "Single_Middle_Left",
+		"color": "Green",
+		"cutouts": "",
+		"label": "Label TL 3",
+		"straps": ""
+	},
+	"95": {
+		"adhesives": "Double_Side",
+		"color": "Leaf",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"96": {
+		"adhesives": "",
+		"color": "Mint",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"97": {
+		"adhesives": "Single_Middle_Right",
+		"color": "Light Pink",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	},
+	"98": {
+		"adhesives": "",
+		"color": "Lavender",
+		"cutouts": "",
+		"label": "Label BL 2",
+		"straps": "Double_Strapped_Left"
+	},
+	"99": {
+		"adhesives": "Double_Side,Single_Middle_Left",
+		"color": "Turquoise",
+		"cutouts": "",
+		"label": "",
+		"straps": "Double_Strapped_Left"
+	}
+}

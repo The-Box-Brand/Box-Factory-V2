@@ -9,6 +9,8 @@ import (
 	"log"
 	"math/rand"
 	"os"
+	"sort"
+	"strings"
 	"sync"
 	"time"
 
@@ -140,6 +142,7 @@ func (mf *miniFactory) createManyUnique(amount int) {
 }
 func createCanvas() {
 	factory := boxes.CreateFactory()
+	uniques := make(map[string]bool)
 
 	width := 1027
 	height := 1027
@@ -147,16 +150,25 @@ func createCanvas() {
 	maxBoxesOnX := width/54 + 1
 	maxBoxesOnY := height/45 + 1
 
+	fmt.Println(maxBoxesOnX)
 	x := 0
 	y := 0
 
 	var newBoxes = make([]boxes.Box, maxBoxesOnX*maxBoxesOnY)
+
+	g, _ := os.Create("boxes.json")
 
 	for i := 0; i < maxBoxesOnX*maxBoxesOnY; i++ {
 	retry:
 		box, err := factory.CreateBox()
 		if err != nil {
 			log.Fatal(err)
+		}
+		box.Background = boxes.Attribute{}
+
+		hash := box.CreateHash()
+		if _, ok := uniques[hash]; ok {
+			goto retry
 		}
 
 		locX := i % maxBoxesOnX
@@ -173,12 +185,17 @@ func createCanvas() {
 				if newBoxes[locX+(locY-1)*maxBoxesOnX].Color.ImagePath == box.Color.ImagePath {
 					goto retry
 				}
+				if newBoxes[locX-1+(locY-1)*maxBoxesOnX].Color.ImagePath == box.Color.ImagePath {
+					goto retry
+				}
 			}
 			if newBoxes[locX+1+(locY-1)*maxBoxesOnX].Color.ImagePath == box.Color.ImagePath {
 				goto retry
 			}
+
 		}
 		newBoxes[i] = box
+		uniques[hash] = true
 	}
 
 	for i := 0; i < maxBoxesOnX*maxBoxesOnY; i++ {
@@ -194,6 +211,7 @@ func createCanvas() {
 
 		draw.Draw(m, m.Bounds(), boxPNG, image.Point{-(x * 54) + shifter, -(y * 45) + 47}, draw.Over)
 
+		fmt.Println(x)
 		x++
 		if x == maxBoxesOnX {
 			y++
@@ -201,6 +219,21 @@ func createCanvas() {
 
 		}
 	}
+
+	jsonMap := make(map[int]map[string]string)
+
+	for i, box := range newBoxes {
+		jsonMap[i+1] = make(map[string]string)
+		jsonMap[i+1]["color"] = box.Color.Name
+		jsonMap[i+1]["cutouts"] = strings.Join(attributesToNames(box.Cutouts), ",")
+		jsonMap[i+1]["adhesives"] = strings.Join(attributesToNames(box.Adhesives), ",")
+		jsonMap[i+1]["label"] = box.Label.Name
+		jsonMap[i+1]["straps"] = strings.Join(attributesToNames(box.Straps), ",")
+
+	}
+
+	jsonBytes, _ := json.MarshalIndent(jsonMap, "", "	")
+	fmt.Fprint(g, string(jsonBytes))
 
 	f, err := os.Create("canvas.png")
 	if err != nil {
@@ -213,4 +246,17 @@ func createCanvas() {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func toRaw(attributeName string) string {
+	return strings.ReplaceAll(attributeName, " ", "_")
+}
+
+func attributesToNames(attributes []boxes.Attribute) (strs []string) {
+	for i := range attributes {
+		strs = append(strs, toRaw(attributes[i].Name))
+	}
+	// Sorts the array, doesn't return anything and just modifies the original array
+	sort.Strings(strs)
+	return
 }
