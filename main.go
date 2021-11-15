@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"image"
 	"image/draw"
-	"image/png"
+	"image/jpeg"
 	"log"
 	"math/rand"
 	"os"
@@ -15,7 +15,6 @@ import (
 	"time"
 
 	"github.com/The-Box-Brand/Box-Factory-V2/boxes"
-	"github.com/disintegration/imaging"
 )
 
 type miniFactory struct {
@@ -144,10 +143,10 @@ func createCanvas() {
 	factory := boxes.CreateFactory()
 	uniques := make(map[string]bool)
 
-	width := 1027
-	height := 1027
+	width := 1500
+	height := 500
 	m := image.NewRGBA(image.Rect(0, 0, width, height))
-	maxBoxesOnX := width/54 + 1
+	maxBoxesOnX := width/54 + 2
 	maxBoxesOnY := height/45 + 1
 
 	fmt.Println(maxBoxesOnX)
@@ -235,14 +234,17 @@ func createCanvas() {
 	jsonBytes, _ := json.MarshalIndent(jsonMap, "", "	")
 	fmt.Fprint(g, string(jsonBytes))
 
-	f, err := os.Create("canvas.png")
+	f, err := os.Create("canvas.jpeg")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer f.Close()
 
-	x2048 := imaging.Resize(m, 2048, 2048, imaging.NearestNeighbor)
-	err = png.Encode(f, x2048)
+	//	x2048 := imaging.Resize(m, 2048, 2048, imaging.NearestNeighbor)
+
+	err = jpeg.Encode(f, m, &jpeg.Options{
+		Quality: 100,
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
