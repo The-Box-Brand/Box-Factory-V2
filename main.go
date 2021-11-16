@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"image"
 	"image/draw"
-	"image/jpeg"
+	"image/png"
 	"log"
 	"math/rand"
 	"os"
@@ -37,10 +37,11 @@ func init() {
 func main() {
 	mf := miniFactory{}
 
-	//mf.createManyUnique(5000)
+	mf.createManyUnique(15)
 	fmt.Println(mf.duration)
-	createCanvas()
+	//createCanvas()
 	createTest()
+	select {}
 }
 
 func createTest() {
@@ -143,8 +144,8 @@ func createCanvas() {
 	factory := boxes.CreateFactory()
 	uniques := make(map[string]bool)
 
-	width := 1500
-	height := 500
+	width := 3440
+	height := 1440
 	m := image.NewRGBA(image.Rect(0, 0, width, height))
 	maxBoxesOnX := width/54 + 2
 	maxBoxesOnY := height/45 + 1
@@ -210,7 +211,6 @@ func createCanvas() {
 
 		draw.Draw(m, m.Bounds(), boxPNG, image.Point{-(x * 54) + shifter, -(y * 45) + 47}, draw.Over)
 
-		fmt.Println(x)
 		x++
 		if x == maxBoxesOnX {
 			y++
@@ -234,7 +234,7 @@ func createCanvas() {
 	jsonBytes, _ := json.MarshalIndent(jsonMap, "", "	")
 	fmt.Fprint(g, string(jsonBytes))
 
-	f, err := os.Create("canvas.jpeg")
+	f, err := os.Create("canvas.png")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -242,9 +242,7 @@ func createCanvas() {
 
 	//	x2048 := imaging.Resize(m, 2048, 2048, imaging.NearestNeighbor)
 
-	err = jpeg.Encode(f, m, &jpeg.Options{
-		Quality: 100,
-	})
+	err = png.Encode(f, m)
 	if err != nil {
 		log.Fatal(err)
 	}

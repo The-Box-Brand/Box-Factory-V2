@@ -118,7 +118,7 @@ func (box Box) SaveBox(path string) error {
 	cond := box.Secret.ImagePath == ""
 	rgba, err := gim.New([]*gim.Grid{
 		{
-			ImageFilePath: ternaryOperator(cond, box.Background.ImagePath, box.Secret.ImagePath).(string), // Switch to box.Color.ImagePath to have no background
+			ImageFilePath: ternaryOperator(cond, box.Color.ImagePath, box.Secret.ImagePath).(string), // Switch to box.Color.ImagePath to have no background
 			Grids:         ternaryOperator(cond, box.createGrids(false), []*gim.Grid{}).([]*gim.Grid),
 		},
 	}, 1, 1).Merge()
@@ -144,7 +144,7 @@ func (box Box) SaveBox(path string) error {
 func (box Box) GetPNG() (image.Image, error) {
 	rgba, err := gim.New([]*gim.Grid{
 		{
-			ImageFilePath: box.Color.ImagePath, // Switch to box.Color.ImagePath to have no background
+			ImageFilePath: box.Color.ImagePath,
 			Grids:         box.createGrids(true),
 		},
 	}, 1, 1).Merge()
