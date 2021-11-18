@@ -39,9 +39,10 @@ func main() {
 
 	mf.createManyUnique(15)
 	fmt.Println(mf.duration)
-	//createCanvas()
+	createCanvas()
 	createTest()
-	select {}
+	for {
+	}
 }
 
 func createTest() {
@@ -117,14 +118,14 @@ func (mf *miniFactory) createManyUnique(amount int) {
 	mf.secrets = make(map[int]bool)
 	mf.uniques = make(map[string]bool)
 
-	for i := 0; i < len(boxes.Traits["secret"]); {
+	/* for i := 0; i < len(boxes.Traits["secret"]); {
 		num := rand.Intn(amount)
 		if _, ok := mf.secrets[num]; ok {
 			continue
 		}
 		mf.secrets[num] = true
 		i++
-	}
+	} */
 
 	wg := &sync.WaitGroup{}
 	wg.Add(amount)
@@ -144,11 +145,11 @@ func createCanvas() {
 	factory := boxes.CreateFactory()
 	uniques := make(map[string]bool)
 
-	width := 3440
-	height := 1440
+	width := 400
+	height := 400
 	m := image.NewRGBA(image.Rect(0, 0, width, height))
 	maxBoxesOnX := width/54 + 2
-	maxBoxesOnY := height/45 + 1
+	maxBoxesOnY := height/45 + 2
 
 	fmt.Println(maxBoxesOnX)
 	x := 0
