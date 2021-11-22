@@ -1,10 +1,12 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"image"
 	"image/draw"
+	"image/gif"
 	"image/png"
 	"log"
 	"math/rand"
@@ -35,12 +37,22 @@ func init() {
 }
 
 func main() {
-	mf := miniFactory{}
+	createGIF(10)
+
+	box := boxes.Box{
+		Color: boxes.Attribute{
+			ImagePath: "./Color/Brown~100.png",
+		},
+	}
+
+	fmt.Println(box.SaveAs("logo.png", true))
+	/* mf := miniFactory{}
+
 
 	mf.createManyUnique(15)
 	fmt.Println(mf.duration)
 	createCanvas()
-	createTest()
+	createTest() */
 	for {
 	}
 }
@@ -52,7 +64,67 @@ func createTest() {
 		log.Fatal(err)
 	}
 
-	box.SaveBox("test.png")
+	box.SaveAs("test.png", false)
+}
+
+func createGIF(framesNum int) {
+	factory := boxes.CreateFactory()
+	var frames []*image.Paletted
+
+	wg := sync.WaitGroup{}
+	wg.Add(framesNum)
+	for i := 0; i < framesNum; i++ {
+		go func() {
+			defer wg.Done()
+
+			box, err := factory.CreateBox()
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			img, err := box.GetIMG(1080)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			t1 := time.Now()
+			buf := bytes.Buffer{}
+			err = gif.Encode(&buf, img, nil)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			tmpimg, err := gif.Decode(&buf)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			/* palettedImage := image.NewPaletted(img.Bounds(), palette.Plan9)
+			draw.Draw(palettedImage, palettedImage.Rect, img, img.Bounds().Min, draw.Over)
+			*/
+			frames = append(frames, tmpimg.(*image.Paletted))
+			fmt.Println(time.Since(t1))
+
+		}()
+
+	}
+
+	delays := make([]int, framesNum)
+	for j := range delays {
+		delays[j] = 25
+	}
+
+	f, err := os.Create("test.gif")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	wg.Wait()
+	err = gif.EncodeAll(f, &gif.GIF{Image: frames, Delay: delays, LoopCount: 0})
+	if err != nil {
+		log.Fatal(err)
+	}
+
 }
 
 func (mf *miniFactory) createUnique(num int, wg *sync.WaitGroup) {
@@ -99,7 +171,7 @@ retry:
 
 	}
 
-	go box.SaveBox("./TBB/" + fmt.Sprint(num) + ".png")
+	go box.SaveAs("./TBB/"+fmt.Sprint(num)+".png", false)
 	/* 	if err != nil {
 		log.Fatal(err)
 	} */

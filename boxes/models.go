@@ -1,6 +1,9 @@
 package boxes
 
-import "sync"
+import (
+	"image"
+	"sync"
+)
 
 type Box struct {
 	Background Attribute
@@ -11,6 +14,8 @@ type Box struct {
 	Straps     []Attribute
 
 	Secret Attribute
+
+	IMG image.Image
 }
 
 type Attribute struct {

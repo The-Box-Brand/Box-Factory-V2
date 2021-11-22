@@ -114,7 +114,53 @@ func (box *Box) getExtras() (err error) {
 }
 
 // Saves the box as a png, will need to do lots more in future
-func (box Box) SaveBox(path string) error {
+func (box Box) SaveAs(path string, isPNG bool) error {
+	var img image.Image
+	var err error
+
+	if isPNG {
+		img, err = box.GetPNG()
+		if err != nil {
+			return err
+		}
+
+		img = imaging.Resize(img, 2048, 2048, imaging.NearestNeighbor)
+	} else {
+		img, err = box.GetIMG(2048)
+		if err != nil {
+			return err
+		}
+	}
+
+	f, err := os.Create(path)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	err = png.Encode(f, img)
+	if err != nil {
+		return err
+	}
+
+	return err
+}
+
+func (box Box) save(path string) error {
+	f, err := os.Create(path)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	err = png.Encode(f, box.IMG)
+	if err != nil {
+		return err
+	}
+
+	return err
+}
+func (box *Box) GetIMG(size int) (image.Image, error) {
 	cond := box.Secret.ImagePath == ""
 	rgba, err := gim.New([]*gim.Grid{
 		{
@@ -124,24 +170,16 @@ func (box Box) SaveBox(path string) error {
 	}, 1, 1).Merge()
 
 	if err != nil {
-		return err
-	}
-	f, err := os.Create(path)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	x2048 := imaging.Resize(rgba, 2048, 2048, imaging.NearestNeighbor)
-	err = png.Encode(f, x2048)
-	if err != nil {
-		return err
+		return rgba, err
 	}
 
-	return err
+	x2048 := imaging.Resize(rgba, size, size, imaging.NearestNeighbor)
+	box.IMG = x2048
+
+	return x2048, err
 }
 
-func (box Box) GetPNG() (image.Image, error) {
+func (box *Box) GetPNG() (image.Image, error) {
 	rgba, err := gim.New([]*gim.Grid{
 		{
 			ImageFilePath: box.Color.ImagePath,
@@ -151,6 +189,8 @@ func (box Box) GetPNG() (image.Image, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	box.IMG = rgba
 	return rgba, err
 }
 
