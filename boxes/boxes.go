@@ -107,6 +107,8 @@ func (box *Box) getExtras() (err error) {
 			box.Cutouts = append(box.Cutouts, attribute)
 		case "label":
 			box.Label = attribute
+		case "state":
+			box.State = attribute
 		}
 	}
 
@@ -207,6 +209,11 @@ func (box Box) createGrids(isPNG bool) (grid []*gim.Grid) {
 		ImageFilePath: "./Default/BOXLINES.png",
 	})
 
+	if box.State.ImagePath != "" {
+		grid = append(grid, &gim.Grid{
+			ImageFilePath: box.State.ImagePath,
+		})
+	}
 	for _, cutout := range box.Cutouts {
 		grid = append(grid, &gim.Grid{
 			ImageFilePath: cutout.ImagePath,
@@ -217,14 +224,14 @@ func (box Box) createGrids(isPNG bool) (grid []*gim.Grid) {
 			ImageFilePath: adhesive.ImagePath,
 		})
 	}
-	if box.Label.ImagePath != "" {
-		grid = append(grid, &gim.Grid{
-			ImageFilePath: box.Label.ImagePath,
-		})
-	}
 	for _, strap := range box.Straps {
 		grid = append(grid, &gim.Grid{
 			ImageFilePath: strap.ImagePath,
+		})
+	}
+	if box.Label.ImagePath != "" {
+		grid = append(grid, &gim.Grid{
+			ImageFilePath: box.Label.ImagePath,
 		})
 	}
 
@@ -275,8 +282,8 @@ func (box Box) CreateHash() string {
 	adhesiveNames := attributesToNames(box.Adhesives)
 	cutoutNames := attributesToNames(box.Cutouts)
 
-	boxFormat := "Background:%v|Color:%v|Cutouts:%v|Adhesives:%v|Straps:%v|Label:%v"
+	boxFormat := "Background:%v|Color:%v|State:%v|Cutouts:%v|Adhesives:%v|Straps:%v|Label:%v"
 
-	hash := md5.Sum([]byte(fmt.Sprintf(boxFormat, toRaw(box.Background.Name), toRaw(box.Color.Name), strings.Join(cutoutNames, ","), strings.Join(adhesiveNames, ","), strings.Join(strapNames, ","), toRaw(box.Label.Name))))
+	hash := md5.Sum([]byte(fmt.Sprintf(boxFormat, toRaw(box.Background.Name), toRaw(box.Color.Name), toRaw(box.State.Name), strings.Join(cutoutNames, ","), strings.Join(adhesiveNames, ","), strings.Join(strapNames, ","), toRaw(box.Label.Name))))
 	return hex.EncodeToString(hash[:])
 }

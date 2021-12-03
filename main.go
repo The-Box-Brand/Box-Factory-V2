@@ -37,7 +37,7 @@ func init() {
 }
 
 func main() {
-	createGIF(10)
+	/* createGIF(10)
 
 	box := boxes.Box{
 		Color: boxes.Attribute{
@@ -45,16 +45,18 @@ func main() {
 		},
 	}
 
-	fmt.Println(box.SaveAs("logo.png", true))
-	/* mf := miniFactory{}
+	fmt.Println(box.SaveAs("logo.png", true)) */
+	createGIF(10)
+	/* 	mf := miniFactory{}
 
-
-	mf.createManyUnique(15)
-	fmt.Println(mf.duration)
-	createCanvas()
-	createTest() */
-	for {
-	}
+	   	mf.createManyUnique(1000)
+	   	fmt.Println(mf.duration)
+	   	for {
+	   	} */
+	/* 	createCanvas()
+	   	createTest()
+	   	for {
+	   	} */
 }
 
 func createTest() {

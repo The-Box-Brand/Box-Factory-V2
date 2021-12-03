@@ -23,6 +23,10 @@ var ExtrasConfig = map[string]wr.Choice{
 		Item:   "label",
 		Weight: 4,
 	},
+	"state": {
+		Item:   "state",
+		Weight: 2,
+	},
 }
 
 // 50/50 for now

@@ -8,6 +8,7 @@ import (
 type Box struct {
 	Background Attribute
 	Color      Attribute
+	State      Attribute
 	Cutouts    []Attribute
 	Adhesives  []Attribute
 	Label      Attribute
