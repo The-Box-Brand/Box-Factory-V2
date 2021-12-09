@@ -46,17 +46,13 @@ func main() {
 	}
 
 	fmt.Println(box.SaveAs("logo.png", true)) */
-	createGIF(10)
-	/* 	mf := miniFactory{}
 
-	   	mf.createManyUnique(1000)
-	   	fmt.Println(mf.duration)
-	   	for {
-	   	} */
-	/* 	createCanvas()
-	   	createTest()
-	   	for {
-	   	} */
+	mf := miniFactory{}
+
+	mf.createManyUnique(1000)
+	fmt.Println(mf.duration)
+	for {
+	}
 }
 
 func createTest() {
@@ -162,6 +158,9 @@ retry:
 		if box.Label.ImagePath != "" {
 			mf.attributesToNumber["label"][box.Label.Name]++
 		}
+		if box.State.ImagePath != "" {
+			mf.attributesToNumber["state"][box.State.Name]++
+		}
 
 		hash := box.CreateHash()
 
@@ -189,6 +188,7 @@ func (mf *miniFactory) createManyUnique(amount int) {
 	mf.attributesToNumber["adhesive"] = make(map[string]int64)
 	mf.attributesToNumber["label"] = make(map[string]int64)
 	mf.attributesToNumber["secret"] = make(map[string]int64)
+	mf.attributesToNumber["state"] = make(map[string]int64)
 	mf.secrets = make(map[int]bool)
 	mf.uniques = make(map[string]bool)
 
