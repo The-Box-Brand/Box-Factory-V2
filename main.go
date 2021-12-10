@@ -135,6 +135,7 @@ retry:
 	var err error
 	if mf.secrets[num] {
 		box = mf.factory.CreateSecretBox()
+		fmt.Println(num, box.Secret.Name)
 		mf.attributesToNumber["secret"][box.Secret.Name]++
 	} else {
 		t1 := time.Now()
@@ -159,6 +160,7 @@ retry:
 			mf.attributesToNumber["label"][box.Label.Name]++
 		}
 		if box.State.ImagePath != "" {
+			fmt.Println(num, box.State.Name)
 			mf.attributesToNumber["state"][box.State.Name]++
 		}
 
@@ -192,14 +194,15 @@ func (mf *miniFactory) createManyUnique(amount int) {
 	mf.secrets = make(map[int]bool)
 	mf.uniques = make(map[string]bool)
 
-	/* for i := 0; i < len(boxes.Traits["secret"]); {
+	for i := 0; i < len(boxes.Traits["secret"]); {
+	retry:
 		num := rand.Intn(amount)
 		if _, ok := mf.secrets[num]; ok {
-			continue
+			goto retry
 		}
 		mf.secrets[num] = true
 		i++
-	} */
+	}
 
 	wg := &sync.WaitGroup{}
 	wg.Add(amount)
