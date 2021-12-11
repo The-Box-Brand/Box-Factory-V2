@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io/fs"
 	"path/filepath"
 	"runtime"
@@ -50,8 +49,6 @@ func loadAttributes() error {
 		if err != nil {
 			return err
 		}
-
-		fmt.Printf("Trait Type: %v\nArtwork Name: %v\nArtwork Rarity: %v\n\n", traitName, artworkName, artworkRarity)
 
 		// Adding the attribute to the corresponding trait inside the map
 		boxes.Traits[traitName] = append(boxes.Traits[traitName], boxes.Attribute{

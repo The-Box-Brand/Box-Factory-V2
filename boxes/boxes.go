@@ -60,6 +60,39 @@ func (factory *Factory) CreateBox() (Box, error) {
 	return box, err
 }
 
+func CreateCustom(attrs []string) error {
+	if len(attrs) < 1 {
+		return fmt.Errorf("not enough attrs")
+	}
+
+	grids := []*gim.Grid{}
+	for i := range attrs {
+		grids = append(grids, &gim.Grid{ImageFilePath: attrs[i]})
+	}
+
+	rgba, _ := gim.New([]*gim.Grid{
+		{
+			ImageFilePath: attrs[0],
+			Grids:         grids,
+		},
+	}, 1, 1).Merge()
+
+	x2048 := imaging.Resize(rgba, 2048, 2048, imaging.NearestNeighbor)
+
+	f, err := os.Create("./custom.png")
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	err = png.Encode(f, x2048)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (box *Box) getBackground() (err error) {
 	box.Background, err = generateRandomAttribute(Traits["background"])
 	if err != nil {
