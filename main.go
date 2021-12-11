@@ -46,7 +46,7 @@ func init() {
 }
 
 func main() {
-	boxes.CreateCustom([]string{boxes.BACKGROUND_BG_DARK_GREY, boxes.BACKGROUND_LINES, boxes.COLOR_DARK_GREY, boxes.BOX_LINES, boxes.STRAP_DOUBLE_STRAPPED_RIGHT, boxes.STRAP_DOUBLE_STRAPPED_LEFT})
+	boxes.CreateCustom([]string{boxes.BACKGROUND_BG_DARK_GREY, boxes.BACKGROUND_LINES, boxes.COLOR_DARK_GREY, boxes.BOX_LINES, boxes.STRAP_DOUBLE_STRAPPED_RIGHT, boxes.STRAP_DOUBLE_STRAPPED_LEFT, boxes.STATE_BEACON})
 
 	/* createGIF(10)
 
