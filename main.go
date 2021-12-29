@@ -10,6 +10,7 @@ import (
 	"image/png"
 	"log"
 	"math/rand"
+	"net/http"
 	"os"
 	"sort"
 	"strings"
@@ -36,20 +37,20 @@ func init() {
 	}
 
 	// Uncomment to get constants for making custom boxes
-	/* for key, attributesArray := range boxes.Traits {
+	for key, attributesArray := range boxes.Traits {
 		for _, attribute := range attributesArray {
 			fmt.Printf(`%v = "%v"`, strings.ToUpper(strings.ReplaceAll(http.CanonicalHeaderKey(strings.ReplaceAll(key+"-"+attribute.Name, " ", "-")), "-", "_")), attribute.ImagePath)
 			fmt.Println()
 		}
-	} */
+	}
 
 }
 
 func main() {
 	boxes.CreateCustom([]string{
-		boxes.BACKGROUND_BG_DARK_GREY,
+		boxes.BACKGROUND_BG_BRIGHT_BLUE,
 		boxes.BACKGROUND_LINES,
-		boxes.COLOR_DARK_GREY,
+		boxes.COLOR_BRIGHT_BLUE,
 		boxes.BOX_LINES,
 		boxes.STRAP_DOUBLE_STRAPPED_RIGHT,
 		boxes.STRAP_DOUBLE_STRAPPED_LEFT,
@@ -66,12 +67,12 @@ func main() {
 
 	fmt.Println(box.SaveAs("logo.png", true)) */
 
-	/* 	mf := miniFactory{}
+	mf := miniFactory{}
 
-	   	mf.createManyUnique(1)
-	   	fmt.Println(mf.duration)
-	   	for {
-	   	} */
+	mf.createManyUnique(100)
+	fmt.Println(mf.duration)
+	for {
+	}
 }
 
 func createTest() {
