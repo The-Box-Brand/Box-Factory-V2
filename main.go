@@ -144,7 +144,6 @@ func createGIF(framesNum int) {
 }
 
 func (mf *miniFactory) createUnique(num int, wg *sync.WaitGroup) {
-	defer wg.Done()
 	mf.Lock()
 	defer mf.Unlock()
 
@@ -192,14 +191,17 @@ retry:
 
 	}
 
-	go box.SaveAs("./TBB/"+fmt.Sprint(num)+".png", false)
+	go func() {
+		defer wg.Done()
+		box.SaveAs("./TBB/"+fmt.Sprint(num)+".png", false)
+	}()
+
 	/* 	if err != nil {
 		log.Fatal(err)
 	} */
 
 }
 func (mf *miniFactory) createManyUnique(amount int) {
-
 	mf.attributesToNumber = make(map[string]map[string]int64)
 	mf.attributesToNumber["background"] = make(map[string]int64)
 	mf.attributesToNumber["color"] = make(map[string]int64)
