@@ -50,6 +50,10 @@ func init() {
 }
 
 func main() {
+	if _, err := os.Stat("./output"); os.IsNotExist(err) {
+		os.Mkdir("./output", 0755)
+	}
+
 	boxes.CreateCustom([]string{
 		boxes.BACKGROUND_BG_BRIGHT_BLUE,
 		boxes.BACKGROUND_LINES,
@@ -79,7 +83,7 @@ func createTest() {
 		log.Fatal(err)
 	}
 
-	box.SaveAs("./TBB/test.png", false)
+	box.SaveAs("./output/test.png", false)
 }
 
 func createGIF(framesNum int) {
@@ -127,7 +131,7 @@ func createGIF(framesNum int) {
 		delays[j] = 25
 	}
 
-	f, err := os.Create("./TBB/test.gif")
+	f, err := os.Create("./output/test.gif")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -190,7 +194,7 @@ retry:
 
 	go func() {
 		defer wg.Done()
-		box.SaveAs("./TBB/"+fmt.Sprint(num)+".png", false)
+		box.SaveAs("./output/"+fmt.Sprint(num)+".png", false)
 	}()
 
 	/* 	if err != nil {
@@ -237,7 +241,7 @@ func (mf *miniFactory) createManyUnique(amount int) {
 		log.Fatal(err)
 	}
 
-	f, err := os.Create("./TBB/boxes.json")
+	f, err := os.Create("./output/boxes.json")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -333,7 +337,7 @@ func createCanvas() {
 
 	}
 
-	f, err := os.Create("./TBB/canvas.png")
+	f, err := os.Create("./output/canvas.png")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -362,7 +366,7 @@ func attributesToNames(attributes []boxes.Attribute) (strs []string) {
 
 func loadAttributes() error {
 	// Walk through every single file in this directory
-	return filepath.WalkDir("./", func(path string, d fs.DirEntry, err error) error {
+	return filepath.WalkDir("./assets", func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
@@ -371,20 +375,21 @@ func loadAttributes() error {
 		if runtime.GOOS == "darwin" {
 			char = `/`
 		}
+
 		// Make sure we are inside one of the trait folders
 		pathSplit := strings.Split(path, char)
-		if len(pathSplit) < 2 {
+		if len(pathSplit) < 3 {
 			return nil
 		}
 
 		// Folder name put to lowercase
-		traitName := strings.ToLower(pathSplit[0])
+		traitName := strings.ToLower(pathSplit[1])
 		if traitName == "boxes" {
 			return nil
 		}
 
 		// Name of image with .png removed
-		artwork := strings.ReplaceAll(pathSplit[1], ".png", "")
+		artwork := strings.ReplaceAll(pathSplit[2], ".png", "")
 
 		// Name of image splitted by ~
 		artworkSplit := strings.Split(artwork, "~")

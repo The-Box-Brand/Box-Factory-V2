@@ -79,7 +79,7 @@ func CreateCustom(attrs []string) error {
 
 	x2048 := imaging.Resize(rgba, 2048, 2048, imaging.NearestNeighbor)
 
-	f, err := os.Create("./TBB/custom.png")
+	f, err := os.Create("./output/custom.png")
 	if err != nil {
 		return err
 	}
@@ -233,13 +233,13 @@ func (box *Box) GetPNG() (image.Image, error) {
 func (box Box) createGrids(isPNG bool) (grid []*gim.Grid) {
 	if !isPNG {
 		grid = append(grid, &gim.Grid{
-			ImageFilePath: "./Default/BACKGROUNDLINES.png",
+			ImageFilePath: "./assets/Default/BACKGROUNDLINES.png",
 		})
 	}
 	grid = append(grid, &gim.Grid{
 		ImageFilePath: box.Color.ImagePath,
 	}, &gim.Grid{
-		ImageFilePath: "./Default/BOXLINES.png",
+		ImageFilePath: "./assets/Default/BOXLINES.png",
 	})
 
 	if box.State.ImagePath != "" {
