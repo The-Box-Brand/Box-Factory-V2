@@ -8,11 +8,15 @@ import (
 	"image/draw"
 	"image/gif"
 	"image/png"
+	"io/fs"
 	"log"
 	"math/rand"
 	"net/http"
 	"os"
+	"path/filepath"
+	"runtime"
 	"sort"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -31,7 +35,6 @@ type miniFactory struct {
 
 // Loads attributes before main is ran
 func init() {
-	rand.Seed(time.Now().UnixNano())
 	if err := loadAttributes(); err != nil {
 		log.Fatal("Failed to load all attributes: " + err.Error())
 	}
@@ -59,19 +62,13 @@ func main() {
 	})
 
 	createGIF(10)
-	/* createGIF(10)
 
-	box := boxes.Box{
-		Color: boxes.Attribute{
-			ImagePath: "./Color/Brown~100.png",
-		},
-	}
-
-	fmt.Println(box.SaveAs("logo.png", true)) */
+	createCanvas()
 
 	mf := miniFactory{}
 
 	mf.createManyUnique(100)
+
 	fmt.Println(mf.duration)
 }
 
@@ -82,7 +79,7 @@ func createTest() {
 		log.Fatal(err)
 	}
 
-	box.SaveAs("test.png", false)
+	box.SaveAs("./TBB/test.png", false)
 }
 
 func createGIF(framesNum int) {
@@ -130,7 +127,7 @@ func createGIF(framesNum int) {
 		delays[j] = 25
 	}
 
-	f, err := os.Create("test.gif")
+	f, err := os.Create("./TBB/test.gif")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -235,8 +232,17 @@ func (mf *miniFactory) createManyUnique(amount int) {
 
 	wg.Wait()
 
-	jsonBytes, _ := json.MarshalIndent(mf.attributesToNumber, "", "	")
-	log.Println(string(jsonBytes))
+	jsonBytes, err := json.MarshalIndent(mf.attributesToNumber, "", "	")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	f, err := os.Create("./TBB/boxes.json")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer f.Close()
+	fmt.Fprint(f, string(jsonBytes))
 }
 func createCanvas() {
 	factory := boxes.CreateFactory()
@@ -253,8 +259,6 @@ func createCanvas() {
 	y := 0
 
 	var newBoxes = make([]boxes.Box, maxBoxesOnX*maxBoxesOnY)
-
-	g, _ := os.Create("boxes.json")
 
 	for i := 0; i < maxBoxesOnX*maxBoxesOnY; i++ {
 	retry:
@@ -329,10 +333,7 @@ func createCanvas() {
 
 	}
 
-	jsonBytes, _ := json.MarshalIndent(jsonMap, "", "	")
-	fmt.Fprint(g, string(jsonBytes))
-
-	f, err := os.Create("canvas.png")
+	f, err := os.Create("./TBB/canvas.png")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -357,4 +358,57 @@ func attributesToNames(attributes []boxes.Attribute) (strs []string) {
 	// Sorts the array, doesn't return anything and just modifies the original array
 	sort.Strings(strs)
 	return
+}
+
+func loadAttributes() error {
+	// Walk through every single file in this directory
+	return filepath.WalkDir("./", func(path string, d fs.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+
+		char := `\`
+		if runtime.GOOS == "darwin" {
+			char = `/`
+		}
+		// Make sure we are inside one of the trait folders
+		pathSplit := strings.Split(path, char)
+		if len(pathSplit) < 2 {
+			return nil
+		}
+
+		// Folder name put to lowercase
+		traitName := strings.ToLower(pathSplit[0])
+		if traitName == "boxes" {
+			return nil
+		}
+
+		// Name of image with .png removed
+		artwork := strings.ReplaceAll(pathSplit[1], ".png", "")
+
+		// Name of image splitted by ~
+		artworkSplit := strings.Split(artwork, "~")
+		if len(artworkSplit) < 2 {
+			return nil
+		}
+
+		artworkName := strings.ReplaceAll(artworkSplit[0], "_", " ")
+
+		// Converting rarity string to integer
+		artworkRarity, err := strconv.Atoi(artworkSplit[1])
+		if err != nil {
+			return err
+		}
+
+		// Adding the attribute to the corresponding trait inside the map
+		boxes.Traits[traitName] = append(boxes.Traits[traitName], boxes.Attribute{
+			Name:   artworkName,
+			Rarity: artworkRarity,
+
+			// Cleaning path
+			ImagePath: "./" + strings.ReplaceAll(path, `\`, "/"),
+		})
+
+		return nil
+	})
 }

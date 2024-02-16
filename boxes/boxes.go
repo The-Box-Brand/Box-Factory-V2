@@ -79,7 +79,7 @@ func CreateCustom(attrs []string) error {
 
 	x2048 := imaging.Resize(rgba, 2048, 2048, imaging.NearestNeighbor)
 
-	f, err := os.Create("./custom.png")
+	f, err := os.Create("./TBB/custom.png")
 	if err != nil {
 		return err
 	}
