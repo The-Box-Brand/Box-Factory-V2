@@ -50,13 +50,15 @@ func main() {
 	boxes.CreateCustom([]string{
 		boxes.BACKGROUND_BG_BRIGHT_BLUE,
 		boxes.BACKGROUND_LINES,
-		boxes.COLOR_BRIGHT_BLUE,
+		boxes.COLOR_BRIGHT_GREEN,
 		boxes.BOX_LINES,
 		boxes.STRAP_DOUBLE_STRAPPED_RIGHT,
 		boxes.STRAP_DOUBLE_STRAPPED_LEFT,
-		boxes.STATE_BEACON,
+		boxes.STATE_WET,
+		//boxes.STATE_BEACON,
 	})
 
+	createGIF(10)
 	/* createGIF(10)
 
 	box := boxes.Box{
@@ -71,8 +73,6 @@ func main() {
 
 	mf.createManyUnique(100)
 	fmt.Println(mf.duration)
-	for {
-	}
 }
 
 func createTest() {
@@ -122,9 +122,7 @@ func createGIF(framesNum int) {
 			*/
 			frames = append(frames, tmpimg.(*image.Paletted))
 			fmt.Println(time.Since(t1))
-
 		}()
-
 	}
 
 	delays := make([]int, framesNum)
