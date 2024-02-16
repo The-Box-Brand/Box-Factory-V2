@@ -1,8 +1,9 @@
 
 # Box Factory V2
 
-This project was made to generate X amount of randomly generated boxes to be used as artwork in an Ethereum NFT project. We intended to launch the project in High School but never did.
+This project was created to generate artwork for an art NFT project on the Ethereum blockchain. We used this project as a tool to create canvases, GIFs, custom pieces, and a mass amount of unique pieces. 
 
+We intended to launch the project in High School but never did.
 
 
 
